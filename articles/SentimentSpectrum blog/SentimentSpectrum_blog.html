@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- IMPORTANT: 
+    For simplicity sake, I have uploaded all the related resources of this project, like ( .js files, .css files etc. ) to the BASE location mentioned below. Please visit this URL and then SAVE all these files, to your local folder ( i.e. to the folder containing this html file ) and then REMOVE this BASE tag, for complete LOCAL hosting purposes. 
+    <base href="https://cdn.jsdelivr.net/gh/linuxguist/bt@main/">  
+    -->          
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../static/css/pensive.css">
+    <!--    style csss-->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!--    font awesome cdn-->
+    <style>
+        code {
+            background-color: #000000; /* Light gray background for better contrast */
+            padding: 4px 6px; /* Add padding inside the code block */
+            border-radius: 4px; /* Rounded corners */
+            font-family: monospace; /* Set a monospace font */
+            font-size: 1em; /* Adjust font size for readability */
+            color: #ffffff; /* Set text color */
+            border: 1px solid #ddd; /* Add a thin border */
+            display: inline-block; /* Ensure it appears like a code box */
+        }
+    </style>
+    
+    <title>Augustine-aj Blogs</title>
+
+</head>
+
+<body>
+    <header class="header_section">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+            <a class="navbar-brand mr-5" href="../../index.html">
+              <span>
+                Binary and Beyond
+              </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                <ul class="navbar-nav  ">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="../../index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../about.html"> About </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../blogs.html"> Blogs </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contacts">Catch me</a>
+                  </li>
+                </ul>
+  
+              </div>
+            </div>
+          </nav>
+        </div>
+    </header>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <!--first-section-->
+    <div class="blog_container">
+        <div class="first-section">
+            <div class="container" >
+                <div class="row justify-content-center">
+                    <div class="col-md-9 ">
+                        <h1 style="font-family:Oswald,sans-serif;font-size:44px;">SentimentSpectrum</h1>
+                        <h4>Live Review Sentiment Monitoring and Analysis System</h4>
+                        <div class="user d-flex align-items-start justify-content-between bg-light p-4 rounded" style="background: #c88f82 !important;">
+                            <div class="d-flex align-items-start">
+                                <img src="../static/images/augustine_joseph.jpg" class="img-fluid rounded-circle" alt="">
+                                <div class="d-block">
+                                    <span class="d-block">by <a class="h6" href="../../index.html">Augustine Joseph</a></span>
+                                    <span class="d-block">MAY 11, 2025</span>
+                                    <span class="d-block">21 mins read</span>
+                                </div>
+                            </div>
+                            <!--
+                            <span class="badge badge-light-primary"><i class="fa fa-heart" aria-hidden="true"></i> 28</span>
+                            -->
+                        </div>
+                        <!--//blog section-->
+                        <div class="blog-section">
+                            <img src="images/sentimentspectrum_header_image.png" class="bounce-little img-fluid shadow-sm rounded " alt="">
+                            <section id="introduction">
+                                <p class="lead mt-3">
+                                    A few months ago, I developed a web application called SentimentSpectrum using the Flask framework. This project aimed to predict customer sentiment for eCommerce websites like Flipkart by leveraging a BERT-based pre-trained model. What makes this application truly remarkable is its ability to provide real-time sentiment analysis, categorizing feedback into labels such as <strong>Positive</strong>, <strong>Negative</strong>, and
+                                    <strong>Neutral</strong>, These insights empower businesses to better understand customer opinions, enabling data-driven decision-making and enhanced customer experiences.
+                                </p>
+                                <p class="lead mt-3">
+                                    In the fast-paced world of eCommerce, understanding customer sentiment is essential for improving product offerings and enhancing customer satisfaction. That’s where SentimentSpectrum steps in—a web application I developed using the Flask framework, designed to provide real-time sentiment analysis on eCommerce reviews, specifically for platforms like Flipkart. Built on the BERT-based pre-trained model, SentimentSpectrum predicts sentiments as Positive, Negative, or Neutral, offering crucial insights for businesses and analysts. Here's an overview of what makes SentimentSpectrum a groundbreaking tool.
+                                </p>
+                                <img src="images/3sentiments.png" class="bounce-little img-fluid shadow-sm rounded " alt="">
+                            </section>
+                            
+                            <section id="features">
+                                <h2>Key Features</h2>
+                                <h4>1. Real-Time Data Collection and Processing</h4>
+                                <ul>
+                                    <li><strong>Tools Used:</strong> Selenium with ChromeDriver</li>
+                                    <li><strong>Functionality:</strong> Automates live customer review extraction and data preprocessing for
+                                        accurate analysis.</li>
+                                </ul>
+                                <h4>2. Advanced Data Visualization</h4>
+                                <ul>
+                                    <li><strong>Graphical Insights:</strong> Various graphical representations using Matplotlib and Seaborn.</li>
+                                    <li><strong>Geographical Representation:</strong> Interactive maps using Nominatim and Leaflet.</li>
+                                </ul>
+                                <h4>3. Target Users</h4>
+                                <ul>
+                                    <li>eCommerce Businesses</li>
+                                    <li>Data Analysts</li>
+                                    <li>Market Researchers</li>
+                                    <li>Product Managers</li>
+                                    <li>Data Science Enthusiasts</li>
+                                </ul>
+                                <img src="images/project_pipeline.png" class="bounce-little img-fluid shadow-sm rounded " alt="">
+                            </section>
+
+                            <section id="project_scope">
+                                <h2>Project Scope</h2>
+                                <p>This project focuses on automating customer review scraping, sentiment analysis using a pre-trained BERT model,
+                                    and generating visual representations of the data.</p>
+                                <ul>
+                                    <li><strong>Data Collection:</strong> Selenium scrapes reviews from Flipkart in real-time.</li>
+                                    <li><strong>Sentiment Analysis:</strong> Uses the <code>nlptown/bert-base-multilingual-uncased-sentiment</code> model.</li>
+                                    <li><strong>Data Visualization:</strong> Matplotlib, Seaborn, Leaflet, and OpenStreetMap.</li>
+                                    <li><strong>User Interface:</strong> Intuitive interface for seamless interaction and exploration.</li>
+                                </ul>
+                            </section>
+                        
+                            <section id="technologies">
+                                <h2>Technologies Used</h2>
+                                <ul>
+                                    <li>Flask Framework</li>
+                                    <li>Selenium</li>
+                                    <li>BERT (nlptown/bert-base-multilingual-uncased-sentiment)</li>
+                                    <li>Matplotlib & Seaborn</li>
+                                    <li>Leaflet & OpenStreetMap</li>
+                                </ul>
+                            </section>
+                        
+                            <section>
+                                <h2>How it's works</h2>
+                                <section>
+                                    <h3>Important Warning</h3>
+                                    <p class="warning">Ensure that the ChromeDriver version matches your installed Chrome browser version. Incompatible versions can result in errors during data retrieval.</p>
+                                    <p>To check your Chrome version, navigate to <code>chrome://settings/help</code> in Chrome and download the
+                                        appropriate version of ChromeDriver.</p>
+                                </section>
+                            
+                                <section>
+                                    <h3>Installation & Setup</h3>
+                                    <ol>
+                                        <li>Clone the repository: <code>git clone https://github.com/augustine-aj/SentimentSpectrum.git</code></li>
+                                        <li>Navigate to the project directory: <code>cd SentimentSpectrum</code></li>
+                                        <li>Install dependencies: <code>pip install -r requirements.txt</code></li>
+                                        <li>Run the application: <code>python connections.py</code></li>
+                                        <li>Open <code>http://localhost:5000/</code> in your browser.</li>
+                                    </ol>
+                                </section>
+                            
+                                <section>
+                                    <h3>Project Directory Structure</h3>
+                                    <pre style="background-color: #d0cece; color: #000; padding: 10px; border-radius: 4px; border: 1px solid #ccc; overflow-x: auto; font-family: monospace;">
+                                        SentimentSpectrum/
+                                        ├── chromedriver/
+                                        │   └── chromedriver.exe
+                                        ├── Data/
+                                        │   ├── Raw Data/
+                                        │   ├── Sentiment Data/
+                                        │   ├── documents/
+                                        ├── frontend/
+                                        │   ├── static/
+                                        │   ├── templates/
+                                        ├── config.py
+                                        ├── connections.py
+                                        ├── datacleaner.py
+                                        ├── phone_list.py
+                                        ├── reviewScraper.py
+                                        ├── sentiment_model.py
+                                        ├── visualisations.py
+                                        </pre>
+                                        
+                                </section>
+                            </section>
+                            <div class="container">
+                                <h3>Key Features index page</h3>
+                                <p>
+                                    The Sentiment Spectrum Review & Analysis System is a user-friendly web interface designed for conducting sentiment analysis on customer reviews using advanced AI tools. Here's a detailed explanation of how your index.html page works
+                                </p>
+                                <p>
+                                    The page introduces and explains the purpose of the Sentiment Spectrum system. It allows users to interact with the tool by selecting brands, models, or providing product links to scrape and analyze customer reviews. The functionalities include scraping reviews, analyzing trends, visualizing data, and downloading CSV reports.
+                                </p>
+                                <img src="images/index_page.png" class="bounce-little img-fluid shadow-sm rounded " alt="">
+                                <ul>
+                                  <li>
+                                    <strong>Demo Mode:</strong> Offers a quick system demonstration by scraping reviews from a pre-defined Flipkart product link.
+                                  </li>
+                                  <li>
+                                    <strong>Customizable Review Scraping:</strong>
+                                    <ul>
+                                      <li>Dropdown options for <strong>Brand</strong> (e.g., iPhone, Samsung, Xiaomi, OnePlus) and dynamically loaded <strong>Model</strong>.</li>
+                                      <li>Manual product link input for direct scraping.</li>
+                                    </ul>
+                                  </li>
+                                  <li>
+                                    <strong>Review Type Selection:</strong>
+                                    <ul>
+                                      <li><strong>Overall Review:</strong> General customer feedback.</li>
+                                      <li><strong>Feature Review:</strong> Insights on specific features (e.g., battery, performance).</li>
+                                    </ul>
+                                  </li>
+                                  <li>
+                                    <strong>Start Review Scraping:</strong> Initiates data scraping, with progress updates and completion alerts.
+                                  </li>
+                                </ul>
+                              
+                                <h3>Navigation After Scraping</h3>
+                                <ul>
+                                  <li><strong>Analysis & Visualization:</strong> Explore trends and insights from scraped data or select results from stored CSV files.</li>
+                                  <li><strong>Geographical Visualization:</strong> Visualize regional review trends using interactive maps.</li>
+                                  <li><strong>View & Download CSV Files:</strong> Access structured data for offline analysis.</li>
+                                </ul>
+                              
+                                <h3>Workflow</h3>
+                                <ol>
+                                  <li>Select a <strong>brand/model</strong> or input a product link.</li>
+                                  <li>Choose a <strong>review type</strong>.</li>
+                                  <li>Press <strong>Start Review Scraping</strong> to begin the process.</li>
+                                  <li>View insights through:
+                                    <ul>
+                                      <li>Analysis and visualization tools.</li>
+                                      <li>Geographical maps.</li>
+                                      <li>Downloadable CSV files.</li>
+                                    </ul>
+                                  </li>
+                                </ol>
+
+                                <h3>Sentiment Spectrum - Analysis and Visualization</h3>
+                                <p>The Analysis and Visualization page of Sentiment Spectrum is designed to offer detailed insights into product reviews by visualizing customer sentiment and performance data. It utilizes powerful libraries like <strong>Matplotlib</strong> and <strong>Seaborn</strong> to create dynamic and engaging visualizations.</p>
+                                <img src="images/analysis_visualisation_page.png" class="bounce-little img-fluid shadow-sm rounded " alt="">
+                                <h4>Key Visualizations</h4>
+                                <p>Here are the primary visualizations provided on the Analysis and Visualization page:</p>
+                                <ul class="visualization-list">
+                                    <li><strong>Sentiment Distribution Bar Plot:</strong> Displays the breakdown of reviews into Positive, Neutral, and Negative categories. Helps gauge the overall customer sentiment.</li>
+                                    <li><strong>Reviews Over Time Histogram:</strong> Tracks the number of reviews submitted month by month, highlighting trends such as increased customer interest around product launches.</li>
+                                    <li><strong>Sentiment Distribution Over Time (Stacked Histogram):</strong> Shows how customer sentiment (Positive, Neutral, and Negative) evolves over time. Helps businesses identify shifts in customer mood.</li>
+                                    <li><strong>Ratings Distribution Bar Plot:</strong> Displays the distribution of star ratings across reviews, helping to visualize overall product satisfaction. A higher number of 5-star reviews signals positive reception.</li>
+                                    <li><strong>Proportion of Total Rating and Review Pie Chart:</strong> Visualizes the total number of ratings and reviews. Indicates which products attract more attention and engagement from customers.</li>
+                                    <li><strong>Price Comparison Bar Plot:</strong> Compares discounted and actual prices of the product, giving insights into pricing strategies and customer perception.</li>
+                                </ul>
+                                <h4>Insights and Recommendations</h4>
+                                <p>After analyzing the visualizations, the page provides actionable insights:</p>
+                                <ul>
+                                    <li><strong>Identifying Strong Product Features:</strong> Highlighting positive customer feedback.</li>
+                                    <li><strong>Areas for Improvement:</strong> Based on negative reviews (e.g., product defects or service issues), businesses can take corrective actions.</li>
+                                    <li><strong>Influence of Pricing Strategies:</strong> A clear understanding of how discount pricing impacts customer perception and satisfaction.</li>
+                                </ul>
+                                <p>The system encourages businesses to:</p>
+                                <ul>
+                                    <li>Focus on enhancing product strengths as indicated by high customer satisfaction (e.g., 5-star reviews).</li>
+                                    <li>Address and resolve negative feedback to improve customer experience.</li>
+                                    <li>Engage customers with neutral sentiments to convert them into satisfied users.</li>
+                                </ul>
+                                <video controls width="800">
+                                    <source src="videos/visualisation_and_analysis_page_video.mp4" type="video/mp4">
+                                    Your browser does not support the video tag. <a href="your-video-file.mp4">Download the video</a>.
+                                </video>
+
+                                <h3>SentimentSpectrum - Geographical Visualization</h3>
+                                <p>
+                                    The <span class="highlight">Sentiment Spectrum</span> is a powerful tool that uses interactive visualizations to analyze customer review data. By combining geographical distributions with feature-specific insights, it helps businesses uncover trends, improve strategies, and enhance customer satisfaction.
+                                </p>
+                                <h4>Geographical Sentiment Mapping</h4>
+                                <p>
+                                    The tool uses <span class="highlight">Leaflet</span>, an open-source JavaScript library, to display reviewer locations on an interactive map. Each location is marked with a color representing customer sentiment:
+                                </p>
+                                <ul class="feature-list">
+                                    <li><span class="sentiment-color positive"></span> <strong>Green</strong>: Positive sentiment</li>
+                                    <li><span class="sentiment-color neutral"></span> <strong>Yellow</strong>: Neutral sentiment</li>
+                                    <li><span class="sentiment-color negative"></span> <strong>Red</strong>: Negative sentiment</li>
+                                </ul>
+                                <p>
+                                    This visualization identifies regional trends and areas with predominant positive or negative feedback, aiding businesses in addressing regional disparities in customer satisfaction.
+                                </p>
+                                <img src="images/geographical_visualisation_page.png" class="bounce-little img-fluid shadow-sm rounded " alt="">
+                                <h2>Feature-Specific Heatmaps</h2>
+                                <p>
+                                    To delve deeper, heatmaps for specific product features (e.g., camera, battery, display, performance) reveal concentrated feedback. These insights allow for:
+                                </p>
+                                <ul class="feature-list">
+                                    <li>Recognizing regions praising features, like excellent camera quality.</li>
+                                    <li>Identifying areas critiquing issues, such as poor battery performance.</li>
+                                </ul>
+                                <h4>Why Visualizations Matter in Data Science</h4>
+                                <ul class="feature-list">
+                                    <li><strong>Enhanced Understanding:</strong> Transforms complex data into simple, intuitive visuals.</li>
+                                    <li><strong>Quick Insights:</strong> Offers immediate trends for faster decision-making.</li>
+                                    <li><strong>Effective Communication:</strong> Simplifies the presentation of findings to a broader audience.</li>
+                                    <li><strong>Pattern Recognition:</strong> Highlights hidden trends and anomalies in customer feedback.</li>
+                                </ul>
+                                <h4>Core Page Features</h4>
+                                <ul class="feature-list">
+                                    <li><strong>Sentiment Distribution Map:</strong> Highlights regional sentiment.</li>
+                                    <li><strong>Feature-Specific Heatmaps:</strong> Visualizes concentrated feedback for different product attributes.</li>
+                                    <li><strong>Interactive Filters:</strong> Lets users explore sentiments by feature or region.</li>
+                                </ul>
+                                <p>
+                                    Integrating such dynamic visualizations makes data analysis more effective, guiding businesses to improve products, tailor marketing, and enhance overall customer engagement. Through the <span class="highlight">Sentiment Spectrum</span>, actionable insights drive growth and satisfaction.
+                                </p>
+                                <video controls width="800">
+                                    <source src="videos/geographical_visualisation_page.mp4" type="video/mp4">
+                                    Your browser does not support the video tag. <a href="your-video-file.mp4">Download the video</a>.
+                                </video>
+                                
+                                <h3>SentimentSpectrum - view and download csv files page</h3>
+                                <p>This page offers a user-friendly interface to access and manage review datasets categorized by product features and overall sentiments. Users can view or download CSV files for detailed analysis of customer feedback on Battery, Camera, Display, and Performance, enabling actionable insights.</p>
+                                <img src="images/view_and_download_csv_page.png" class="bounce-little img-fluid shadow-sm rounded " alt="">
+                                <h4>Reviews - Data Columns</h4>
+                                <ul>
+                                    <li><strong>Review_Title & Review:</strong> Provide summarized and detailed customer feedback.</li>
+                                    <li><strong>Reviewer_Name & Reviewer_Location:</strong> Include reviewer identity and location.</li>
+                                    <li><strong>Review_Date:</strong> Indicates when the review was posted.</li>
+                                    <li><strong>Review_Likes & Dislikes:</strong> Show agreement or criticism of the review.</li>
+                                    <li><strong>Sentiment_Text & Sentiment:</strong> Text and inferred categories (positive, neutral, negative).</li>
+                                    <li><strong>Sentiment_Score:</strong> Numerical sentiment intensity (-1 to +1).</li>
+                                </ul>
+                                <h4>Why This Page is Useful</h4>
+                                <ul>
+                                    <li><strong>Comprehensive Access:</strong> Offers categorized data for both specific features and overall sentiment analysis.</li>
+                                    <li><strong>Dual Functionality:</strong> Enables quick online viewing and detailed offline analysis.</li>
+                                    <li><strong>Detailed Insights:</strong> Data like sentiment scores and reviewer locations support in-depth qualitative and quantitative analysis.</li>
+                                </ul>
+                                <p>This streamlined approach ensures comprehensive customer feedback analysis and aids in strategic decision-making.</p>
+
+
+
+                            <section>
+                                <h2>Conclusion</h2>
+                                <p>SentimentSpectrum provides businesses and data scientists with powerful tools for extracting and analyzing
+                                    customer sentiments from live eCommerce reviews. Its comprehensive features and user-friendly interface make it
+                                    an essential resource for data-driven decision-making.
+                                </p>
+                                <p>
+                                    To explore the project, visit the <a href="https://github.com/augustine-aj/SentimentSpectrum" target="_blank" >SentimentSpectrum GitHub Repository</a>.
+                                </p>
+                            </section>
+                              
+  
+
+                    
+                            <!--
+                            <div class="blockquote-1 bg-light p-4 ">
+                                <blockquote class="blockquote">
+                                    <h4 class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</h4>
+                                    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                                    <div class="d-flex justify-content-end">
+                                        <button class="btn btn-primary"><i class="fa fa-twitter mr-2" aria-hidden="true"></i>Tweet</button>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            -->                    
+                        </div>
+                        <!--share section-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="info_section layout_padding" id="contacts">
+        <div class="footer_contact">
+          <div class="heading_container">
+            <h2>
+              Contact Me
+            </h2>
+          </div>
+          <div class="box">
+            <a href="https://www.linkedin.com/in/augustine-aj/" class="img-box">
+              <img src="../static/images/linkedin.png" alt="" class="img-1">
+              <img src="../static/images/linkedin-o.png" alt="" class="img-2">
+            </a>
+            <a href="https://github.com/augustine-aj" class="img-box">
+              <img src="../static/images/github.png" alt="" class="img-1">
+              <img src="../static/images/github-o.png" alt="" class="img-2">
+            </a>
+            <a href="mailto:augustine04849@gmail.com" class="img-box">
+              <img src="../static/images/envelope.png" alt="" class="img-1">
+              <img src="../static/images/envelope-o.png" alt="" class="img-2">
+            </a>
+          </div>
+        </div>
+    
+    
+      </section>
+    <!--footer-section-->
+    <section class="container-fluid footer_section">
+        <p>
+          Copyright &copy; 2025 All Rights Reserved By
+          <a href="https://github.com/augustine-aj">augustine-aj</a>
+        </p>
+    </section>
+    <!--end footer section-->
+
+    <script type="text/javascript" src="../../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.js"></script>
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        }
+        </script>
+
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+        // Get the current URL, removing any fragment
+        var documentUrl = document.location.href.replace(/#.*$/, '')
+
+        // Iterate through all links
+        var linkEls = document.getElementsByTagName('A')
+        for (var linkIndex = 0; linkIndex < linkEls.length; linkIndex++) {
+            var linkEl = linkEls[linkIndex]
+
+            // Ignore links that don't begin with #
+            if (!linkEl.getAttribute('href').match(/^#/)) {
+            continue;
+            }
+
+            // Convert to an absolute URL
+            linkEl.setAttribute('href', documentUrl + linkEl.getAttribute('href'))
+        }
+        })    
+    </script>
+
+</body>
+</html>
