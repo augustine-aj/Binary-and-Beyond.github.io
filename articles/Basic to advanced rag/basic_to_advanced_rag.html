@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- IMPORTANT: 
+  For simplicity sake, I have uploaded all the related resources of this project, like ( .js files, .css files etc. ) to the BASE location mentioned below. Please visit this URL and then SAVE all these files, to your local folder ( i.e. to the folder containing this html file ) and then REMOVE this BASE tag, for complete LOCAL hosting purposes. 
+  <base href="https://cdn.jsdelivr.net/gh/linuxguist/bt@main/">  
+  -->          
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../static/css/pensive.css">
+  <!--    style csss-->
+  <link rel="stylesheet" href="../static/css/style.css">
+  <!--    font awesome cdn-->
+  <title>Augustine-aj Blogs</title>
+
+</head>
+
+<body>
+  <header class="header_section">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+        <a class="navbar-brand mr-5" href="../../index.html">
+          <span>
+            Binary and Beyond
+          </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+            <ul class="navbar-nav  ">
+              <li class="nav-item active">
+                <a class="nav-link" href="../../index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../about.html"> About </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../blogs.html"> Blogs </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacts">Catch me</a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <div class="blog_container">
+    <div class="first-section">
+      <div class="container" >
+        <div class="row justify-content-center">
+          <div class="col-md-9 ">
+            <h1 style="font-family:Oswald,sans-serif;font-size:44px;">From Basic to Advanced RAG: Every Step of the Way</h1>
+            <div class="user d-flex align-items-start justify-content-between bg-light p-4 rounded" style="background: #c88f82 !important;">
+              <div class="d-flex align-items-start">
+                <img src="../static/images/augustine_joseph.jpg" class="img-fluid rounded-circle" alt="">
+                <div class="d-block">
+                  <span class="d-block">by <a class="h6" href="../../index.html">Augustine Joseph</a></span>
+                  <span class="d-block">Jan 25,  2025</span>
+                  <span class="d-block">13 mins read</span>
+                </div>
+              </div>
+            </div>
+            <div class="blog-section">
+              <section id="introduction">
+                <p>
+                    RAG, or Retrieval Augmented Generation, provides LLMs with the ability to retrieve information from one or multiple data sources and use that information to answer user queries. Setting up a basic RAG system is relatively straightforward; however, developing a robust and reliable system presents numerous challenges—particularly when optimizing for computational efficiency.                
+                </p>
+                <p>
+                    In this blog, we’ll explore common pitfalls in developing RAG systems and introduce advanced techniques to enhance retrieval quality, minimize hallucinations, and tackle complex queries. By the conclusion of this post, you’ll have a comprehensive understanding of how to construct advanced RAG systems and overcome challenges along the way.                              
+                </p>
+              </section>
+                  
+              <section id="features">
+                <h2>Basic to Advanced RAG</h2>
+                <p>
+                    Below is a diagram illustrating the basic flow of RAG. This typical setup involves the sequence<br>
+                    <strong>Query → Retrieval → Answer</strong>
+                </p>
+                <img src="images/basic_rag.webp" class="bounce-little img-fluid shadow-sm rounded " alt="">
+                <p><strong>Basic RAG Flow</strong></p>
+                <p>The basic RAG flow involves the following steps:</p>
+                <ul>
+                    <li>Converting the query into an embedding using an embedding model.</li>
+                    <li>Performing similarity search within a database of the data source.</li>
+                    <li>Selecting the top relevant documents. </li>
+                    <li>Feeding the retrieved documents into an LLM to generate the final answer.</li>
+                    <li>Exportable, clean HTML, CSS, and JS code</li>
+                </ul>
+                <p><strong>In summary:</strong></p>
+                <p><strong>Query → Query Embedding → Similarity Search → Retrieval → Context → Answering</strong></p>
+                <p>Each stage has potential failure points:</p>
+                <ul>
+                    <li>Query: The user might provide a poorly framed or ambiguous query.</li>
+                    <li>Query Embedding: The embedding model might fail to generate a representative embedding.</li>
+                    <li>Similarity Search: It may miss relevant documents or retrieve irrelevant ones due to database limitations.</li>
+                    <li>Retrieval: Retrieved information might lack proper context.</li>
+                    <li>Context: The LLM might improperly use the retrieved information or rely too heavily on prior knowledge.</li>
+                </ul>
+                <p>To create a reliable RAG system, we need to enhance every stage. This advanced approach transforms the basic flow into:</p>
+                <p><strong>Advanced RAG Flow</strong></p>
+                <img src="images/advanced_rag-flow.webp" class="bounce-little img-fluid shadow-sm rounded " alt="">
+                <p>Each green box in the advanced flow diagram introduces components designed to address specific points of failure. Let’s explore each enhancement in detail.</p>
+
+                <h2>Query Transformation</h2>
+                <p>User queries are often ungrammatical, ambiguous, or ill-framed, and some queries require multi-step reasoning to answer accurately.</p>
+                <p><strong>Handling Poorly Framed Queries</strong></p>
+                <p>An LLM can reframe such queries, making them more precise and structured.</p>
+                <img src="images/query_transformation.webp" class="bounce-little img-fluid shadow-sm rounded " alt="">
+                <p><strong>Multi-Step Query Decomposition</strong></p>
+                <p>For complex queries requiring logical or analytical reasoning, we can decompose the query into smaller, manageable sub-queries:</p>
+                <ul>
+                    <li>Break the query into sub-queries.</li>
+                    <li>Process each sub-query using the basic RAG flow.</li>
+                    <li>Feed the answers to the LLM alongside the original query to synthesize the final answer.</li>
+                </ul>
+                <p><strong>Example: </strong>For the query, “Is the average summer temperature in Berlin higher than in 2005?”:</p>
+                <ul>
+                    <li>Generate sub-queries: “What is the current average summer temperature in Berlin?” and “What was the average summer temperature in Berlin in 2005?”</li>
+                    <li>Use the answers to derive the final conclusion.</li>
+                </ul>
+                <p>Query decomposition ensures that even if relevant information isn’t explicitly stated in the data, the system can still derive answers using analytical reasoning.</p>
+                
+                <h2>Query Routing</h2>
+                <p>When multiple data sources exist or documents are grouped for compact retrieval, queries must be routed appropriately to maximize relevance.</p>
+                <img src="images/query_routing.webp" class="bounce-little img-fluid shadow-sm rounded " alt="">
+                <p><strong>Process</strong></p>
+                <ul>
+                    <li>Assign a description to each document source, summarizing its contents (e.g., “All data about Houston sports teams”).</li>
+                    <li>Use an LLM to determine which sources to query based on the user’s input.</li>
+                    <li>Generate sub-queries tailored to the specific sources.</li>
+                </ul>
+                <p><strong>Example: </strong>If querying both Houston and Boston data sources, the system:</p>
+                <ul>
+                    <li>Queries each source independently.</li>
+                    <li>Combines the results into a cohesive answer.</li>
+                </ul>
+                <p>Query routing can also extend to tools, APIs, or agents, allowing dynamic parameter generation for enhanced task-specific outputs.</p>
+
+                <h2>Advanced Retrieval Techniques</h2>
+                <p>Improving retrieval quality is crucial for better RAG performance. Two advanced methods are:</p>
+                <p><strong>Dense Passage Retrieval (DPR)</strong></p>
+                <p>Typically, the same embedding model encodes both queries and documents. However, general-purpose models often fail to represent the nuances needed for specific tasks.</p>
+                <div class="d-flex justify-content-center">
+                    <img src="images/dpr.webp" class="bounce-little img-fluid shadow-sm rounded" alt="">
+                </div>
+                <p>DPR addresses this by:</p>
+                <ul>
+                    <li>Using separate encoders for queries and documents.</li>
+                    <li>Training on question-answer pairs with a Siamese objective for optimized embeddings.</li>
+                </ul>
+                <p><strong>CoBERT</strong></p>
+                <p>CoBERT surpasses standard cosine similarity and even DPR by:</p>
+                <img src="images/cobert.webp" class="bounce-little img-fluid shadow-sm rounded " alt="">
+                <ul>
+                    <li>Avoiding single-dimensional embeddings.</li>
+                    <li>Tokenizing queries and documents and enriching word embeddings.</li>
+                    <li>Using pairwise similarity across all tokens to create a correlation matrix.</li>
+                </ul>
+                <p><strong>Benefits: </strong>CoBERT captures fine-grained token-level relevance. For example, a query like “Gross revenue of all Company X products in 2005” involves multiple aspects (‘Gross Revenue’, ‘all products’, ‘2005’). Token-level comparisons provide nuanced matching, avoiding noisy or incomplete retrievals.</p>
+                <img src="images/qurery_confusion_matrix.webp" class="bounce-little img-fluid shadow-sm rounded " alt="">
+                <p><strong>Implementation: </strong></p>
+                <ul>
+                    <li>Tokenize queries (“q1, q2, q3…”) and documents (“d1, d2, d3…”).</li>
+                    <li>Generate enriched embeddings (“x1, x2, x3…” and “y1, y2, y3…”).</li>
+                    <li>Calculate a correlation matrix and derive the MaxSim score by taking the maximum value across rows and summing these values.</li>
+                </ul>
+
+                <h2>Reranking and Post-Processing</h2>
+                <p><strong>Reranking</strong></p>
+                <p>To consolidate results:</p>
+                <ul>
+                    <li>Retrieve top-k results using different methods (e.g., dense embeddings, BM25).</li>
+                    <li>Use algorithms like Reciprocal Rank Fusion to merge and re-rank the results.</li>
+                </ul>
+                <p><strong>Chain of Note (CoN)</strong></p>
+                <img src="images/CoN.webp" class="bounce-little img-fluid shadow-sm rounded " alt="">
+                <ul>
+                    <li>Chain of Note (CoN)Reducing LLM hallucinations.</li>
+                    <li>Handling conflicting or partial information.</li>
+                    <li>Merging LLM knowledge with retrieved content.</li>
+                </ul>
+                <p><strong>How it works:</strong></p>
+                <img src="images/CoN_Example.webp" class="bounce-little img-fluid shadow-sm rounded " alt="">
+                <ul>
+                    <li>An LLM annotates key points from each retrieval, focusing on relevance.</li>
+                    <li>These notes serve as intermediate steps, reducing errors in generating final answers.</li>
+                </ul>
+                <p><strong>Advanced Example: </strong>When conflicting information exists, or retrieved documents are partially relevant, CoN enables LLMs to cross-check and synthesize precise answers.</p>
+
+                <h2>Conclusion</h2>
+                <p>By addressing potential pitfalls in: <strong>Query → Query Embedding → Similarity Search → Retrieval → Context → Answering</strong>
+                    we can create robust RAG systems. Techniques like query transformation, query routing, DPR, CoBERT, reranking, and Chain of Note significantly enhance retrieval accuracy and reliability. With these advanced methods, 
+                    your RAG systems can handle even the most complex queries with precision.
+                </p>
+                <p>Don’t settle for basic RAG—build systems that stand out. We hope this guide helps you construct dependable and efficient retrieval systems. Happy building! </p>
+              </section>                          
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="info_section layout_padding" id="contacts">
+    <div class="footer_contact">
+      <div class="heading_container">
+        <h2>
+          Contact Me
+        </h2>
+      </div>
+      <div class="box">
+        <a href="https://www.linkedin.com/in/augustine-aj/" class="img-box">
+          <img src="../static/images/linkedin.png" alt="" class="img-1">
+          <img src="../static/images/linkedin-o.png" alt="" class="img-2">
+        </a>
+        <a href="https://github.com/augustine-aj" class="img-box">
+          <img src="../static/images/github.png" alt="" class="img-1">
+          <img src="../static/images/github-o.png" alt="" class="img-2">
+        </a>
+        <a href="mailto:augustine04849@gmail.com" class="img-box">
+          <img src="../static/images/envelope.png" alt="" class="img-1">
+          <img src="../static/images/envelope-o.png" alt="" class="img-2">
+        </a>
+      </div>
+    </div>  
+  </section>
+
+  <section class="container-fluid footer_section">
+    <p>
+      Copyright &copy; 2025 All Rights Reserved By
+      <a href="https://github.com/augustine-aj">augustine-aj</a>
+    </p>
+  </section>
+
+  <script type="text/javascript" src="../../js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="../../js/bootstrap.js"></script>
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+    // Get the current URL, removing any fragment
+    var documentUrl = document.location.href.replace(/#.*$/, '')
+
+    // Iterate through all links
+    var linkEls = document.getElementsByTagName('A')
+    for (var linkIndex = 0; linkIndex < linkEls.length; linkIndex++) {
+      var linkEl = linkEls[linkIndex]
+
+      // Ignore links that don't begin with #
+      if (!linkEl.getAttribute('href').match(/^#/)) {
+      continue;
+      }
+
+      // Convert to an absolute URL
+      linkEl.setAttribute('href', documentUrl + linkEl.getAttribute('href'))
+    }
+    })    
+  </script>
+
+</body>
+</html>
