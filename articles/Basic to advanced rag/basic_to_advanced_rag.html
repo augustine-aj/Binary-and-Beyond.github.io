@@ -168,7 +168,7 @@
                     <li>Using pairwise similarity across all tokens to create a correlation matrix.</li>
                 </ul>
                 <p><strong>Benefits: </strong>CoBERT captures fine-grained token-level relevance. For example, a query like “Gross revenue of all Company X products in 2005” involves multiple aspects (‘Gross Revenue’, ‘all products’, ‘2005’). Token-level comparisons provide nuanced matching, avoiding noisy or incomplete retrievals.</p>
-                <img src="images/qurery_confusion_matrix.webp" class="bounce-little img-fluid shadow-sm rounded " alt="">
+                <img src="images/query_confusion_matrix.webp" class="bounce-little img-fluid shadow-sm rounded " alt="">
                 <p><strong>Implementation: </strong></p>
                 <ul>
                     <li>Tokenize queries (“q1, q2, q3…”) and documents (“d1, d2, d3…”).</li>
@@ -191,7 +191,7 @@
                     <li>Merging LLM knowledge with retrieved content.</li>
                 </ul>
                 <p><strong>How it works:</strong></p>
-                <img src="images/CoN_Example.webp" class="bounce-little img-fluid shadow-sm rounded " alt="">
+                <img src="images/CoN_example.webp" class="bounce-little img-fluid shadow-sm rounded " alt="">
                 <ul>
                     <li>An LLM annotates key points from each retrieval, focusing on relevance.</li>
                     <li>These notes serve as intermediate steps, reducing errors in generating final answers.</li>
